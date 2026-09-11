@@ -1,12 +1,9 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
 
-@Controller()
-export class AppController {
-  constructor(private readonly appService: AppService) {}
-
+@Controller('productos')
+export class ProductosController {
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  getProductos() {
+    return { mensaje: 'Módulo de productos listo' };
   }
 }
